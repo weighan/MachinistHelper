@@ -1,9 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RPM">
 
-</android.support.constraint.ConstraintLayout>
+    <Switch
+        android:id="@+id/imperial_metric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="Imperial" />
+
+    <EditText
+        android:id="@+id/InLeft"
+        android:layout_width="60dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/InRight"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/InLeft"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="68dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:onClick="calculate"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/DiameterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imperial_metric"
+        android:layout_alignStart="@+id/InLeft"
+        android:text="Diameter"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/SFMText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/InLeft"
+        android:layout_alignStart="@+id/InRight"
+        android:layout_marginBottom="-80dp"
+        android:text="SFM"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/answer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="223dp"
+        android:text="RPM"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/answer_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/answer_title"
+        android:layout_alignEnd="@+id/imperial_metric"
+        android:text="TextView" />
+
+</RelativeLayout>
