@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LayoutBack"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RPM">
@@ -11,10 +12,11 @@
         android:id="@+id/InLeft"
         android:layout_width="63dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="number"
+        android:nextFocusForward="@+id/InRight"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LeftText" />
@@ -23,13 +25,12 @@
         android:id="@+id/InRight"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="60dp"
         android:ems="10"
         android:inputType="number"
         android:textAlignment="center"
-        app:layout_constraintStart_toEndOf="@+id/InLeft"
-        app:layout_constraintTop_toTopOf="@+id/LeftText" />
+        app:layout_constraintStart_toEndOf="@+id/inMid"
+        app:layout_constraintTop_toTopOf="@+id/InLeft" />
 
     <TextView
         android:id="@+id/LeftText"
@@ -60,7 +61,7 @@
         android:id="@+id/RightText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
+        android:layout_marginStart="168dp"
         android:layout_marginTop="8dp"
         android:text="SFM"
         android:textColor="@android:color/black"
@@ -132,6 +133,13 @@
             android:text="RPM" />
 
         <RadioButton
+            android:id="@+id/iprRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="IPR" />
+
+        <RadioButton
             android:id="@+id/ipmRadio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,6 +153,30 @@
             android:layout_weight="1"
             android:text="SFM" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/inMid"
+        android:layout_width="81dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/InLeft"
+        app:layout_constraintTop_toTopOf="@+id/InLeft" />
+
+    <TextView
+        android:id="@+id/MidText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Flutes"
+        android:textColor="@android:color/black"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/LeftText"
+        app:layout_constraintTop_toTopOf="@+id/LeftText" />
 
 
 </android.support.constraint.ConstraintLayout>
