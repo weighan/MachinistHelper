@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(getApplicationContext(), RPM.class);
+        Intent intent = new Intent(getApplicationContext(), DrillChart.class);
         startActivity(intent);
     }
 }
