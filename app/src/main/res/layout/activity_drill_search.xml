@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".drill_search">
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="340dp"
+        android:onClick="search"
+        android:text="Search"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/dimension_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/search_button"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="find dimension..." />
+
+    <Switch
+        android:id="@+id/imperialSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="100dp"
+        android:text="Imperial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Metric"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imperialSwitch"
+        app:layout_constraintStart_toEndOf="@+id/imperialSwitch"
+        app:layout_constraintTop_toTopOf="@+id/imperialSwitch" />
+
+    <ToggleButton
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="true"
+        android:text="number"
+        android:textOff="number"
+        android:textOn="number"
+        app:layout_constraintEnd_toStartOf="@+id/letter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/letter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="letter"
+        android:textOff="letter"
+        android:textOn="letter"
+        app:layout_constraintEnd_toStartOf="@+id/fractional"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <ToggleButton
+        android:id="@+id/fractional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="fractional"
+        android:textOff="fractional"
+        android:textOn="fractional"
+        app:layout_constraintEnd_toStartOf="@+id/metric"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/letter"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ToggleButton
+        android:id="@+id/metric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="metric"
+        android:textOff="metric"
+        android:textOn="metric"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fractional"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <RadioGroup
+        android:id="@+id/greaterLessRadio"
+        android:layout_width="219dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="8dp"
+        android:orientation='horizontal'
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/lessBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Less Than"
+            tools:layout_editor_absoluteX="226dp"
+            tools:layout_editor_absoluteY="184dp" />
+
+        <RadioButton
+            android:id="@+id/greatBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Greater Than"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="161dp" />
+
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>
